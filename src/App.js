@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./actions/actions";
+import ProductList from './components/ProductList';
 
 function App() {
   const counter = useSelector(state => state.counter);
@@ -10,7 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+    <ProductList/>
+      {/* <header className="App-header"> 
         <div className="card" style={style}>
           <img className="card-img-top" src="logo192.png" />
           <div className="card-body">
@@ -40,7 +42,7 @@ function App() {
             <input type="text" id="little" defaultValue="10" />
           </div>
         </div>
-      </header>
+            </header>*/}
     </div>
   );
 }
